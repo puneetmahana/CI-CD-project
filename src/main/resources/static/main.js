@@ -142,25 +142,25 @@ $(document).ready(function() {
 
     });
 
-    $('#SearchForm').on('submit', function(event) {
+   /* $('#SearchForm').on('submit', function(event) {
             var data = {
                 key: searchInput.val()
             };
 
-            /*
+            *//*
              * Persist the new key-value pair.
              * Clear the inputs.
              * Set keyboard focus to key input: ready to start typing.
-             */
+             *//*
             $.post('/search', data, function() {
                 refreshTable();
                 keyInput.val('');
                 valueInput.val('');
                 searchInput.val('');
             });
-            /* Prevent HTTP form submit */
+            *//* Prevent HTTP form submit *//*
             event.preventDefault();
-        });
+        });*/
 
     /* Focus keyboard input into key input; ready to start typing */
     keyInput.focus();
