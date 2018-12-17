@@ -5,8 +5,8 @@ services:
     ports:
      - "8084:8084"
     links:
-      - "db:redis"
-  db:
+      - "redis:redis"
+  redis:
     image: "redis:alpine"
     hostname: redis
     ports:
