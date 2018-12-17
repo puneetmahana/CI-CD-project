@@ -17,19 +17,4 @@ public class ThymeleafConfig {
         templateResolver.setSuffix(".html");
         return templateResolver;
     }
-
-    @Bean
-    public SpringTemplateEngine templateEngine() {
-        SpringTemplateEngine springTemplateEngine = new SpringTemplateEngine();
-        springTemplateEngine.addTemplateResolver(templateResolver());
-        return springTemplateEngine;
-    }
-
-    @Bean
-    public ThymeleafViewResolver viewResolver() {
-        ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
-        viewResolver.setTemplateEngine(templateEngine());
-        viewResolver.setOrder(1);
-        return viewResolver;
-    }
 }

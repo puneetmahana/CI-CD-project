@@ -3,6 +3,7 @@ package com.Puneet.Docker.DockerSpringboot.controller;
 import com.Puneet.Docker.DockerSpringboot.model.Movie;
 import com.Puneet.Docker.DockerSpringboot.repository.RedisRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
