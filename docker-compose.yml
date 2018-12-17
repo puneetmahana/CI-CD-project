@@ -1,0 +1,16 @@
+version: '2'
+services:
+  app:
+    build: .
+    ports:
+     - "8084:8084"
+    links:
+      - "db:redis"
+  db:
+    image: "redis:alpine"
+    hostname: redis
+    ports:
+     - "6379:6379"
+    volumes:
+        - /Users/tejussubrahmanya/Desktop/puneetf5/Docker-Springboot/redis.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
