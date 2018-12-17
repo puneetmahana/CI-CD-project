@@ -1,18 +1,23 @@
-version: '2'
+version: '3'
+
 services:
-  app:
-    build: .
-    ports:
-     - "8084:8084"
-    hostname: java
-    
+  
+    ### java Batch server ###
+  java01:
+      image: openjdk:8-jdk-alpine
+      container_name: java
+      volumes:
+        - /Users/tejussubrahmanya/.jenkins/workspace/f5project/target/myapp.jar:/Users/tejussubrahmanya/Desktop/puneetf5/tomcatcontainer/webapps/myapp.jar
+      ports:
+        - "8084:8084"
+      command: tail -f /dev/null
+
   redis:
-    image: "redis:alpine"
-    hostname: redis
-    ports:
-     - "6379:6379"
-    links:
-      - "app:java"
-    volumes:
-        - /Users/tejussubrahmanya/Desktop/puneetf5/Docker-Springboot/redis.conf:/usr/local/etc/redis/redis.conf
-    command: redis-server /usr/local/etc/redis/redis.conf
+      image: redis:5-alpine
+      container_name: redis
+      volumes:
+        - /Users/tejussubrahmanya/Desktop/puneetf5/redis-5.0.2/redis.conf:/usr/local/etc/redis/redis.conf
+      command: redis-server /usr/local/etc/redis/redis.conf
+
+
+  
