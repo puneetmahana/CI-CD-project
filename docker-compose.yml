@@ -4,13 +4,15 @@ services:
     build: .
     ports:
      - "8084:8084"
-    links:
-      - "redis:redis"
+    hostname: java
+    
   redis:
     image: "redis:alpine"
     hostname: redis
     ports:
      - "6379:6379"
+    links:
+      - "app:java"
     volumes:
         - /Users/tejussubrahmanya/Desktop/puneetf5/Docker-Springboot/redis.conf:/usr/local/etc/redis/redis.conf
     command: redis-server /usr/local/etc/redis/redis.conf

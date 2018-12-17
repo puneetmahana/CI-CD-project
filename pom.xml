@@ -11,7 +11,7 @@
 	<groupId>com.Puneet.Docker</groupId>
 	<artifactId>Docker-Springboot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>Docker-Springboot</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -23,12 +23,7 @@
 		<dependency>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-data-redis</artifactId>
-		<exclusions>
-			<exclusion>
-				<groupId>io.lettuce</groupId>
-				<artifactId>lettuce-core</artifactId>
-			</exclusion>
-		</exclusions>
+
 	</dependency>
 		<dependency>
 			<groupId>redis.clients</groupId>
@@ -65,9 +60,9 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-
 		</plugins>
 		<finalName>myapp</finalName>
+
 	</build>
 
 
