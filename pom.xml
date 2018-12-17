@@ -60,15 +60,15 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.3.2</version>
-				<configuration>
-					<classesDirectory>${project.build.directory}/puneet</classesDirectory>
-					<outputDirectory>${project.build.directory}/puneet</outputDirectory>
-				</configuration>
-			</plugin>
+			<!--<plugin>-->
+				<!--<groupId>org.apache.maven.plugins</groupId>-->
+				<!--<artifactId>maven-jar-plugin</artifactId>-->
+				<!--<version>2.3.2</version>-->
+				<!--<configuration>-->
+					<!--<classesDirectory>${project.build.directory}/puneet</classesDirectory>-->
+					<!--<outputDirectory>${project.build.directory}/puneet</outputDirectory>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
 		</plugins>
 		<finalName>myapp</finalName>
 
