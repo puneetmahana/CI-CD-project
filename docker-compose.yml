@@ -9,12 +9,15 @@ services:
       volumes:
         - /Users/tejussubrahmanya/.jenkins/workspace/f5project/target/myapp.jar:/Users/tejussubrahmanya/Desktop/puneetf5/tomcatcontainer/webapps/myapp.jar
       ports:
-        - "8084:8084"
-      command: tail -f /dev/null
+        - "8083:8083"
+      command: java -jar /Users/tejussubrahmanya/Desktop/puneetf5/tomcatcontainer/webapps/myapp.jar
 
   redis:
       image: redis:5-alpine
       container_name: redis
+      hostname: redis
+      ports:
+        - "6379:6379"
       volumes:
         - /Users/tejussubrahmanya/Desktop/puneetf5/redis-5.0.2/redis.conf:/usr/local/etc/redis/redis.conf
       command: redis-server /usr/local/etc/redis/redis.conf
