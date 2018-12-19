@@ -6,11 +6,9 @@ services:
   java01:
       image: openjdk:8-jdk-alpine
       container_name: java
-      volumes:
-        - /Users/tejussubrahmanya/.jenkins/workspace/f5project/target/myapp.jar:/Users/tejussubrahmanya/Desktop/puneetf5/tomcatcontainer/webapps/myapp.jar
       ports:
         - "8083:8083"
-      command: java -jar /Users/tejussubrahmanya/Desktop/puneetf5/tomcatcontainer/webapps/myapp.jar
+      command: java -jar /home/opc/puneet/myapp.jar
 
   redis:
       image: redis:5-alpine
@@ -18,9 +16,7 @@ services:
       hostname: redis
       ports:
         - "6379:6379"
-      volumes:
-        - /Users/tejussubrahmanya/Desktop/puneetf5/redis-5.0.2/redis.conf:/usr/local/etc/redis/redis.conf
-      command: redis-server /usr/local/etc/redis/redis.conf
+      command: redis-server /home/opc/puneet/redis.conf
 
 
   

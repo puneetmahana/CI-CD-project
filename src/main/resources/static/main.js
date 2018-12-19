@@ -1,8 +1,4 @@
-/**
- * Create HTML table row.
- *
- * \param text (str) HTML code to be placed inside the row.
- */
+
 function tr(text) {
     return '<tr>' + text + '</tr>';
 }
